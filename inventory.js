@@ -1,0 +1,1 @@
+export function useItem(state,item){if(!state.inventory[item])return false;if(item==='Wasser')state.thirst=Math.min(100,state.thirst+35);else if(item==='Konserve')state.hunger=Math.min(100,state.hunger+30);else return false;state.inventory[item]--;if(state.inventory[item]===0)delete state.inventory[item];return true;}
